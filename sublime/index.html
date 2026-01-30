@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowNestHub</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div class="loader">
+    <div class="loader-inner">
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
+    </div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <!-- Left: Logo + Brand Name -->
+      <div class="logo-section">
+        <img src="logog-t.png" alt="GlowNestHub Logo" width="40">
+        <span class="brand-name">GlowNestHub</span>
+      </div>
+      
+      <!-- Center: Search Bar -->
+      <form class="search-form" action="#" method="get">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      
+      <!-- Navigation Links -->
+      <div class="nav-links">
+        <a href="#home" class="nav-link" title="Home">
+          <i class="fas fa-home"></i>
+          <span class="link-text">Home</span>
+        </a>
+        <a href="#services" class="nav-link" title="Services">
+          <i class="fas fa-concierge-bell"></i>
+          <span class="link-text">Services</span>
+        </a>
+        <a href="#about" class="nav-link" title="About">
+          <i class="fas fa-info-circle"></i>
+          <span class="link-text">About</span>
+        </a>
+        <a href="#help" class="nav-link" title="Help">
+          <i class="fas fa-question-circle"></i>
+          <span class="link-text">Help</span>
+        </a>
+      </div>
+
+      <!-- Right: Mode Toggles -->
+      <div class="mode-toggle">
+        <button id="lightModeBtn" aria-label="Light mode"><i class="fas fa-sun"></i></button>
+        <button id="darkModeBtn" aria-label="Dark mode"><i class="fas fa-moon"></i></button>
+        <button id="autoModeBtn" aria-label="Auto mode"><i class="fas fa-adjust"></i></button>   
+      </div>
+    </nav>
+  </header>
+ <!-- === Background Video === -->
+ <div class="video-container">
+  <video id="light-video" class="bg-video" autoplay muted loop playsinline>
+    <source src="video 1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video id="dark-video" class="bg-video" autoplay muted loop playsinline>
+    <source src="video 8.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+ 
+
+  <!-- Main Content -->
+  <main>
+    <!-- Banner Section -->
+    <section class="banner animate-on-scroll">
+      <h1>Welcome to <span> GlowNestHub</span></h1>
+      <p>Nurture your mind, body, and soul with natural care and healing wisdom.</p>
+      <img src="logog-t.png" alt="GlowNestHub Logo" width="200">
+      
+    </section>
+
+    <!-- Home Section -->
+    <section id="home" class="glass-section animate-on-scroll">
+      <div class="hero">
+        <h2>Glow Nest Hub</h2>
+        <p class="tagline">Your Safe Space for Mind, Body & Soul</p>
+      </div>
+
+      <div class="about-home">
+        <h3>Welcome to Glow Nest Hub</h3>
+        <p>
+          At Glow Nest Hub, we believe wellness starts from within. 
+          Our platform offers mindfulness resources, natural healing 
+          tips, and a supportive community to help you live your best life.
+        </p>
+        
+        <div class="featured-content">
+          <h3>What You'll Find Here</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-spa"></i> Guided Meditations for a calmer mind</li>
+            <li><i class="fas fa-leaf"></i> Natural Remedies to heal and recharge</li>
+            <li><i class="fas fa-book-open"></i> Inspiring Wellness Articles</li>
+            <li><i class="fas fa-users"></i> A Safe Community to share your journey</li>
+          </ul>
+        </div>
+
+        <!-- Daily Glow Rituals -->
+        <div class="rituals-container glass">
+          <h3><i class="fas fa-sun"></i> Daily Glow Rituals</h3>
+          <p>Start and end your day with mindful rituals that nourish your spirit.</p>
+          
+          <button id="ritualsToggle" class="glow-button">Show Rituals</button>
+          <div id="ritualList" class="hidden">
+            <ul>
+              <li><strong>Morning Breathwork:</strong> 3 minutes of deep breathing</li>
+              <li><strong>Gratitude Flow:</strong> List 3 things you're thankful for</li>
+              <li><strong>Evening Unwind:</strong> Warm bath and journaling</li>
+              <li><strong>Moonlight Check-in:</strong> "Did I show myself kindness today?"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-home glass">
+        <h3>Our Community Speaks</h3>
+        <div class="testimonial-slider">
+          <div class="testimonial active">
+            <p>"Glow Nest Hub feels like a warm hug. It's peaceful, simple, and beautiful."</p>
+            <cite>— Maria K.</cite>
+          </div>
+          <div class="testimonial">
+            <p>"This platform changed my self-care routine completely. So grateful!"</p>
+            <cite>— David T.</cite>
+          </div>
+          <div class="testimonial">
+            <p>"The perfect balance of wisdom and practical tools for daily wellness."</p>
+            <cite>— Aisha M.</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="glass-section animate-on-scroll">
+      <h2>Our Healing Services</h2>
+      <div class="services-grid">
+        <div class="service-card glass">
+          <i class="fas fa-hands-helping"></i>
+          <h3>Classic Cuddle</h3>
+          <p>A cozy hour of grounding connection with full consent and communication.</p>
+          <span class="price-tag">$75/session</span>
+        </div>
+        <div class="service-card glass">
+          <i class="fas fa-moon"></i>
+          <h3>Night Nest</h3>
+          <p>Soft nighttime sessions to help you sleep peacefully, held and heard.</p>
+          <span class="price-tag">$90/session</span>
+        </div>
+        <div class="service-card glass">
+          <i class="fas fa-heart"></i>
+          <h3>Presence Package</h3>
+          <p>You talk, we hold space — physically or emotionally, your call.</p>
+          <span class="price-tag">$120/session</span>
+        </div>
+      </div>
+      <button class="cta-button" onclick="document.getElementById('help').scrollIntoView({behavior: 'smooth'})">
+        Book a Session
+      </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="glass-section animate-on-scroll">
+      <h2>Our Story</h2>
+      <div class="about-content">
+        <div class="about-text glass">
+          <p>
+            Welcome to <strong>GlowNestHub</strong>, your sanctuary for holistic healing and self-discovery. 
+            In today's fast-paced world, we believe in slowing down, reconnecting with ourselves, 
+            and nurturing both mind and body naturally.
+          </p>
+          <p>
+            Founded by <strong>Jeska Karambu</strong>, GlowNestHub was born from a deep desire to create 
+            a safe, nurturing space for individuals seeking balance and inner peace.
+          </p>
+          <blockquote>
+            "GlowNestHub is more than a website—it's a movement. A call to embrace your authentic 
+            self and heal with love, nature, and mindfulness."
+            <cite>— Jeska Karambu, Founder</cite>
+          </blockquote>
+        </div>
+        <div class="about-image glass">
+          <img src="founder.jpg" alt="Jeska Karambu, Founder">
+        </div>
+      </div>
+
+      <!-- Healing Sections -->
+      <div class="healing-sections">
+        <div class="healing-section glass">
+          <i class="fas fa-seedling"></i>
+          <h3>Start Your Healing Journey</h3>
+          <p>Explore ways to reconnect with yourself, overcome emotional blocks, and embrace positive living.</p>
+        </div>
+        <div class="healing-section glass">
+          <i class="fas fa-spa"></i>
+          <h3>Natural Care Tips</h3>
+          <ul>
+            <li>Herbal Remedies for Stress Relief</li>
+            <li>Essential Oils for Relaxation</li>
+            <li>Healthy Teas for Detox</li>
+          </ul>
+        </div>
+        <div class="healing-section glass">
+          <i class="fas fa-brain"></i>
+          <h3>Your Mind Garden</h3>
+          <p>Feed your mind with positivity, affirmations, and mental clarity exercises.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section animate-on-scroll">
+      <h2>Moments of Peace</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="Slide 1.jpeg" alt="woman">
+          </div>
+          <div class="swiper-slide">
+            <img src="Slide 2.jpeg" alt="notes">
+          </div>
+          <div class="swiper-slide">
+            <img src="Slide 3.jpeg" alt="cinnammon">
+          </div>
+          <div class="swiper-slide">
+            <img src="Slide 4.jpeg" alt="waterfall ">
+          </div>
+
+           <div class="swiper-slide">
+            <img src="Slide 5.jpeg" alt="candle">
+          </div>
+          <div class="swiper-slide">
+            <img src="Slide 6.jpeg" alt="cave">
+          </div>
+
+            <div class="swiper-slide">
+        <video autoplay muted loop>
+          <source src="video 10.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+              <div class="video-timer">0:00 / 0:00</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section id="help" class="glass-section animate-on-scroll">
+      <h2>We're Here For You</h2>
+      <div class="help-content">
+        <div class="help-text glass">
+          <p>
+            Our team is here to support you every step of your wellness journey. 
+            Whether you have questions about our therapies, need help choosing a service, 
+            or simply wish to connect, we're only a click away.
+          </p>
+          <p>
+            Let's co-create your path to natural healing and joy.
+          </p>
+        </div>
+        
+        <div class="contact-methods glass">
+          <h3>Connect With Us</h3>
+          <div class="contact-buttons">
+            <a href="tel:+254729694489" class="contact-button">
+              <i class="fas fa-phone"></i> Call Us
+            </a>
+            <a href="https://wa.me/254729694489" class="contact-button whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:glownesthub2@gmail.com" class="contact-button email">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://instagram.com/glow_nest20" class="contact-button instagram">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://twitter.com/glownesthub" class="contact-button twitter">
+              <i class="fab fa-twitter"></i> Twitter
+            </a>
+          </div>
+           
+          <section id="qr-download" style="
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 500px;
+  color: #fff;
+">
+  <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">📄 Download Our GlowNest Report</h2>
+  <p style="font-size: 1rem; margin-bottom: 1rem;">
+    Scan the QR code below to download the full project report instantly.
+  </p>
+
+   
+          </div>
+        </div>
+      </div>
+      
+      <div class="location glass">
+        <h3>Our Location</h3>
+        <div class="map-container">
+          <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.346368874906!2d37.03762421474707!3d0.012409499999994542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182895e2311ee4c7%3A0x91f3f360b9d5e5f3!2sNanyuki%2C%20Kenya!5e0!3m2!1sen!2ske!4v1624987654321!5m2!1sen!2ske"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <button id="mapToggle" class="map-toggle-button">
+            <i class="fas fa-expand"></i> Expand Map
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content glass">
+      <div class="footer-logo">
+        <img src="logog-t.png" alt="GlowNestHub Logo" width="50">
+        <span class="brand-name">GlowNestHub</span>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#help">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>GlowNestHub</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Audio Elements -->
+  <audio id="chaosSound" src="button-16.mp3"></audio>
+  <audio id="calmSound" src="calm.mp3"></audio>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
